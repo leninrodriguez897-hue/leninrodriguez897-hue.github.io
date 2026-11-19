@@ -6,8 +6,20 @@
   --muted: #625d55;
   --line: #e5dfd6;
   --accent: #97543d;
+  --button-hover-bg: #f2e9e1;
   --serif: "Playfair Display", Georgia, serif;
   --sans: "DM Sans", Arial, sans-serif;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #252724;
+  --surface: #30322e;
+  --ink: #f2efe9;
+  --muted: #c3beb4;
+  --line: #484942;
+  --accent: #e3a184;
+  --button-hover-bg: #41372f;
 }
 
 * {
@@ -84,6 +96,30 @@ button:focus-visible {
 .main-nav {
   display: flex;
   gap: clamp(1.1rem, 3vw, 2.5rem);
+}
+
+.header-tools {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.75rem, 2vw, 1.5rem);
+}
+
+.theme-toggle {
+  padding: 0.45rem 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: var(--surface);
+  color: var(--ink);
+  font: 600 0.74rem var(--sans);
+  white-space: nowrap;
+  cursor: pointer;
+  transition: color 160ms ease, border-color 160ms ease, background-color 160ms ease;
+}
+
+.theme-toggle:hover {
+  border-color: var(--accent);
+  background: var(--button-hover-bg);
+  color: var(--accent);
 }
 
 .main-nav a,
@@ -434,7 +470,7 @@ button:focus-visible {
 
 .copy-button:hover {
   border-color: var(--accent);
-  background: #f2e9e1;
+  background: var(--button-hover-bg);
   color: var(--accent);
 }
 
@@ -479,6 +515,15 @@ button:focus-visible {
 
   .main-nav {
     gap: 0.85rem;
+  }
+
+  .header-tools {
+    gap: 0.65rem;
+  }
+
+  .theme-toggle {
+    padding: 0.38rem 0.55rem;
+    font-size: 0.68rem;
   }
 
   .main-nav a {
@@ -559,6 +604,13 @@ button:focus-visible {
     justify-content: flex-end;
     max-width: 15rem;
     row-gap: 0.35rem;
+  }
+
+  .header-tools {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    max-width: calc(100% - 2.5rem);
+    row-gap: 0.4rem;
   }
 
   .intro h1 {
