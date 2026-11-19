@@ -530,7 +530,7 @@ button:focus-visible {
   }
 
   .main-nav {
-    gap: 0.85rem;
+    gap: 0.3rem;
   }
 
   .header-tools {
@@ -538,12 +538,49 @@ button:focus-visible {
   }
 
   .theme-toggle {
-    padding: 0.38rem 0.55rem;
-    font-size: 0.68rem;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0.4rem 0.55rem;
+    font-size: 0.82rem;
   }
 
   .main-nav a {
-    font-size: 0.74rem;
+    display: inline-flex;
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+    font-size: 0.82rem;
+  }
+
+  .site-header .wordmark,
+  .site-footer .wordmark {
+    display: inline-flex;
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+  }
+
+  .intro-contact a,
+  .text-link,
+  .contact-list > a,
+  .email-row > a,
+  .site-footer a:last-child {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+  }
+
+  .intro-contact a,
+  .contact-list > a,
+  .email-row > a,
+  .site-footer a:last-child {
+    min-width: 44px;
+  }
+
+  .copy-button {
+    min-width: 44px;
+    min-height: 44px;
+    font-size: 0.82rem;
   }
 
   .section-wrap {
