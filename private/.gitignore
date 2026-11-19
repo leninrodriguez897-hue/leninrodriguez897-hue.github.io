@@ -1,6 +1,0 @@
-# Private files: Git will never upload these
-private/
-
-# Clutter your computer creates on its own
-.DS_Store
-Thumbs.db
